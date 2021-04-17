@@ -98,9 +98,9 @@ public class MainActivity extends AppCompatActivity {
         if (inputPoint == 0) return; //什麼都沒有按 就不會back()
 
         inputPoint--;                   //1 => 0
+        btnNumber[inputValue.get(inputPoint)].setEnabled(true); //設定此btn可以按
         inputValue.set(inputPoint, -1); //設定inputValue為(0,-1) -1可能是不顯示的意思??
         input[inputPoint].setText("");  //設定input[0]為空白
-        btnNumber[inputValue.get(inputPoint)].setEnabled(true); //設定此btn可以按
     }
     public void clear(View view) {
         inputPoint = 0;
